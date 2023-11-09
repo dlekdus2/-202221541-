@@ -148,3 +148,13 @@ VaR.05 = abs(q.05.R*w0)
 VaR.01
 VaR.05
 
+mu.r = 0.04
+sd.r = 0.09
+w0 = 100000
+year_q.01.R = exp(((1+mu.r)**sqrt(12))-1+sd.r*qnorm(0.01)*sqrt(12)) - 1
+year_q.05.R = exp(((1+mu.r)**sqrt(12))-1+sd.r*qnorm(0.05)*sqrt(12)) - 1
+year_VaR.01 = abs(year_q.01.R*w0)
+year_VaR.05 = abs(year_q.05.R*w0)
+year_VaR.01
+year_VaR.05
+  
